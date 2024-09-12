@@ -2,10 +2,13 @@ This code include the first steps done on the data preprocessing process of the 
 (https://www.consumerfinance.gov/data-research/hmda/historic-data/?geo=ny&records=all-records&field_descriptions=labels)
 
 In this code we have:
+
 A) Selected "no co-applicant" records from the column "co_applicant_ethnicity_name"
+
 B) Filter columns:
   action_taken_name
   denial_reason_name_1
+  
 C) Created the column "action_taken":
     df['action_taken'] = df['action_taken_name'].replace({ 'Loan originated': 'approved', 'Application approved but not accepted': 'approved', 'Application denied by financial institution': 'denied' })
 
